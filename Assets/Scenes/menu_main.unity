@@ -407,6 +407,8 @@ GameObject:
   - component: {fileID: 400892738}
   - component: {fileID: 400892737}
   - component: {fileID: 400892736}
+  - component: {fileID: 400892740}
+  - component: {fileID: 400892739}
   m_Layer: 5
   m_Name: settings_btn
   m_TagString: Untagged
@@ -517,6 +519,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400892734}
   m_CullTransparentMesh: 1
+--- !u!65 &400892739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400892734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 33, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &400892740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400892734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &450447341
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +752,7 @@ MonoBehaviour:
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
+    serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
@@ -815,6 +844,7 @@ GameObject:
   - component: {fileID: 671807980}
   - component: {fileID: 671807979}
   - component: {fileID: 671807978}
+  - component: {fileID: 671807981}
   m_Layer: 5
   m_Name: start_btn
   m_TagString: Untagged
@@ -925,6 +955,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671807976}
   m_CullTransparentMesh: 1
+--- !u!65 &671807981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671807976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 33, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1087581031
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +980,7 @@ GameObject:
   - component: {fileID: 1087581034}
   - component: {fileID: 1087581033}
   - component: {fileID: 1087581032}
+  - component: {fileID: 1087581036}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -977,7 +1021,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 53776ccc54d06224e80bde3237a42a77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1023,6 +1067,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087581036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087581031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef6701b4a12f414c98541d9b00c8f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  options:
+  - {fileID: 671807978}
+  - {fileID: 1197560410}
+  - {fileID: 400892736}
 --- !u!1 &1197560408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1095,7 @@ GameObject:
   - component: {fileID: 1197560412}
   - component: {fileID: 1197560411}
   - component: {fileID: 1197560410}
+  - component: {fileID: 1197560413}
   m_Layer: 5
   m_Name: levels_btn
   m_TagString: Untagged
@@ -1145,6 +1206,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197560408}
   m_CullTransparentMesh: 1
+--- !u!65 &1197560413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197560408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 33, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1670184791
 GameObject:
   m_ObjectHideFlags: 0
