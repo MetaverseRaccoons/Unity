@@ -43,8 +43,9 @@ public class MenuNButtons : MonoBehaviour
             options[currentSelection].image.color = new Color32(255, 255, 255, 255);
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) ){ //For testing as the switch statment does nothing right now.
+        if (Input.GetKeyDown(KeyCode.Return) ){ //For testing as the switch statement does nothing right now.
             Debug.Log("Picked: " + currentSelection);
+            //options[currentSelection].onClick();
         }
     }
 }
