@@ -45,7 +45,7 @@ public class MenuNButtons : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) ){ //For testing as the switch statement does nothing right now.
             Debug.Log("Picked: " + currentSelection);
-            //options[currentSelection].onClick();
+            options[currentSelection].onClick.Invoke();
         }
     }
 }
