@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Reflection;
 using conv = System.Convert;
+using System.ComponentModel;
 
 public class SettingsJSON : MonoBehaviour
 {
@@ -13,13 +15,13 @@ public class SettingsJSON : MonoBehaviour
     public class Settings
     {
         public KeyCode ForwardKey;
-        public KeyCode BackKey; 
+        public KeyCode BackKey;
         public KeyCode LeftKey;
-        public KeyCode RightKey; 
-        public KeyCode EnterKey; 
+        public KeyCode RightKey;
+        public KeyCode EnterKey;
     }
 
-    public Settings mySettings = new Settings();
+    public static Settings mySettings = new Settings();
 
     void Start()
     {
@@ -38,5 +40,9 @@ public class SettingsJSON : MonoBehaviour
             Debug.Log(JSONtext.text);
             mySettings = JsonUtility.FromJson<Settings>(JSONtext.text);
         }
+    }
+
+    Settings getSettings(){
+        return mySettings;
     }
 }

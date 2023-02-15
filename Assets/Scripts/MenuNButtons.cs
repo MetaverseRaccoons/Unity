@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using Sett = SettingsJSON.Settings;
 using System.IO;
 
-
 /*  https://gamedev.stackexchange.com/questions/172842/unity-menu-navigation-using-keyboard-controller-input */
 public class MenuNButtons : MonoBehaviour
 {
     public Button[] options;
+    
+    public static bool SettingsChanged = false;
 
     private int currentSelection;
     private int numberOfOptions;
@@ -28,12 +29,15 @@ public class MenuNButtons : MonoBehaviour
         sr.Close();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
-        StreamReader sr = new StreamReader("Assets/Resources/settings.json");
-        currentSettings = JsonUtility.FromJson<Sett>(sr.ReadLine());
-        sr.Close();
+        if( SettingsChanged ){
+            StreamReader sr = new StreamReader("Assets/Resources/settings.json");
+            currentSettings = JsonUtility.FromJson<Sett>(sr.ReadLine());
+            sr.Close();
+            SettingsChanged = false;
+        }
         if (Input.GetKeyDown(currentSettings.ForwardKey) /*|| Controller input*/)
         { //Input telling it to go up or down.
             currentSelection = (currentSelection + 1)%numberOfOptions;
