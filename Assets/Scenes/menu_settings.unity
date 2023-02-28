@@ -6432,7 +6432,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1467430205}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -35,6 +35,7 @@ public class SettingButtonBehaviour : MonoBehaviour
             // If the key is rejected the scan will continue until a key is accepted or until the timeout expires.
 
             InputAction inputAction = InputManager.GetAction("CustomControls", ButtonAction);
+            Debug.Log(inputAction);
             inputAction.Bindings[0].Positive = result.Key;
             Debug.Log("Scan complete: " + result.Key.ToString() + ".");
             InputManager.Save();
