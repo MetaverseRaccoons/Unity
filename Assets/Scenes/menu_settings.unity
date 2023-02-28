@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4924,7 +4924,7 @@ GameObject:
   - component: {fileID: 1256036650}
   - component: {fileID: 1256036649}
   m_Layer: 5
-  m_Name: SBForwardKey (1)
+  m_Name: SBThrottleKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6346,7 +6346,7 @@ GameObject:
   - component: {fileID: 1467430206}
   - component: {fileID: 1467430205}
   m_Layer: 5
-  m_Name: up_btn
+  m_Name: throttle_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6385,7 +6385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Up
+  ButtonAction: Throttle
 --- !u!114 &1467430206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7231,7 +7231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Up
+  m_text: 'Throttle
 
 '
   m_isRightToLeft: 0
@@ -7260,7 +7260,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 27.95
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8539,7 +8539,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8261077351264085643}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

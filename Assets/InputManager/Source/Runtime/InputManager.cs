@@ -596,7 +596,9 @@ namespace Luminosity.IO
 			Dictionary<string, InputAction> table;
 			if(m_instance.m_actionLookup.TryGetValue(controlSchemeName, out table))
 			{
+				Debug.Log("1");
 				InputAction action;
+				//Debug.Log(table["UI_Up"]);
 				if(table.TryGetValue(actionName, out action))
 					return action;
 			}
