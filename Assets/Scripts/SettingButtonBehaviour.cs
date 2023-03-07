@@ -96,9 +96,6 @@ public void changeJoystickButton()
                 // Debug.Log("3");
                 return false;
                 }*/
-            Debug.Log((int)KeyCode.Joystick1Button0); // 350
-            Debug.Log((int)KeyCode.Joystick1Button19); // 369
-            Debug.Log((int)KeyCode.Joystick2Button0); // 370
             InputAction inputAction = InputManager.GetAction("CustomControls", ButtonAction);
             inputAction.Bindings[0].Type = InputType.Button;
             //Debug.Log("8");
