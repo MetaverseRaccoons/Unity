@@ -856,10 +856,13 @@ RectTransform:
 <<<<<<< HEAD
   m_AnchoredPosition: {x: 0.1, y: 3.8}
   m_SizeDelta: {x: 1600, y: 1200}
+<<<<<<< HEAD
 =======
   m_AnchoredPosition: {x: 0.1, y: 0}
   m_SizeDelta: {x: 15, y: 5}
 >>>>>>> 8c62a1c (v1.0.0)
+=======
+>>>>>>> 412baaf9dd887cf70f5fc9e95d429f39a5b0a210
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441599670
 MonoBehaviour:
@@ -4510,10 +4513,14 @@ Transform:
   m_GameObject: {fileID: 2031322645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 1, z: -1000}
 =======
   m_LocalPosition: {x: 0, y: 1, z: -15}
 >>>>>>> 8c62a1c (v1.0.0)
+=======
+  m_LocalPosition: {x: 0, y: 1, z: -1000}
+>>>>>>> 412baaf9dd887cf70f5fc9e95d429f39a5b0a210
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4554,6 +4561,9 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 412baaf9dd887cf70f5fc9e95d429f39a5b0a210
 --- !u!1 &2052460250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4781,5 +4791,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139900127}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 =======
 >>>>>>> 8c62a1c (v1.0.0)
+=======
+>>>>>>> 412baaf9dd887cf70f5fc9e95d429f39a5b0a210
