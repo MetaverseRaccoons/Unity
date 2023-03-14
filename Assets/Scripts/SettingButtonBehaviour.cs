@@ -135,7 +135,7 @@ public void changeJoystickAxis()
             Debug.Log(result.JoystickAxisValue);
             InputAction inputAction = InputManager.GetAction("CustomControls", ButtonAction);
             //inputAction.Bindings[0].Axis = InputManager.GetAxis("Throttle");
-            inputAction.Bindings[0].Invert = result.JoystickAxisValue < 0.0f;
+            //inputAction.Bindings[0].Invert = result.JoystickAxisValue < 0.0f;
             //inputAction.Bindings[0].Axis = result.JoystickAxis;
             Debug.Log(inputAction.Bindings[0].Axis);
             //Debug.Log(result.JoystickAxis);
