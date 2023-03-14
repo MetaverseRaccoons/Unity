@@ -669,7 +669,7 @@ MonoBehaviour:
     - m_name: UI_Down
       m_description: 
       m_bindings:
-      - m_positive: 274
+      - m_positive: 0
         m_negative: 0
         m_deadZoneType: 0
         m_deadZone: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
         m_scale: 1
         m_snap: 0
         m_invert: 0
-        m_type: 0
+        m_type: 6
         m_axis: 0
         m_joystick: 0
         m_gamepadButton: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
         m_scale: 1
         m_snap: 0
         m_invert: 0
-        m_type: 0
+        m_type: 6
         m_axis: 0
         m_joystick: 0
         m_gamepadButton: 0
