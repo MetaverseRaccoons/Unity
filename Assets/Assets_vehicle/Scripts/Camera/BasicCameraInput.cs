@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Luminosity.IO;
 
 namespace RVP
 {
@@ -21,7 +22,7 @@ namespace RVP
         void FixedUpdate() {
             // Set camera rotation input if the input axes are valid
             if (cam && !string.IsNullOrEmpty(xInputAxis) && !string.IsNullOrEmpty(yInputAxis)) {
-                cam.SetInput(Input.GetAxis(xInputAxis), Input.GetAxis(yInputAxis));
+                cam.SetInput(InputManager.GetAxis(xInputAxis), InputManager.GetAxis(yInputAxis));
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Luminosity.IO;
 
 namespace RVP
 {
@@ -22,7 +23,7 @@ namespace RVP
 
         void Update() {
             if (!string.IsNullOrEmpty(changeButton)) {
-                if (Input.GetButtonDown(changeButton)) {
+                if (InputManager.GetButtonDown(changeButton)) {
                     ChangePreset(currentPreset + 1);
                 }
             }

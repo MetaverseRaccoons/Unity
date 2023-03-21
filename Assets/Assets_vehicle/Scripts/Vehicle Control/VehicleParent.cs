@@ -214,9 +214,11 @@ namespace RVP
             forwardDot = Vector3.Dot(forwardDir, GlobalControl.worldUpDir);
             rightDot = Vector3.Dot(rightDir, GlobalControl.worldUpDir);
             upDot = Vector3.Dot(upDir, GlobalControl.worldUpDir);
+            //Debug.Log(norm);
+            if (norm != null) {
             norm.transform.position = tr.position;
             norm.transform.rotation = Quaternion.LookRotation(groundedWheels == 0 ? upDir : wheelNormalAverage, forwardDir);
-
+            }
             // Check if performing a burnout
             if (groundedWheels > 0 && !hover && !accelAxisIsBrake && burnoutThreshold >= 0 && accelInput > burnoutThreshold && brakeInput > burnoutThreshold) {
                 burnout = Mathf.Lerp(burnout, ((5 - Mathf.Min(5, Mathf.Abs(localVelocity.z))) / 5) * Mathf.Abs(accelInput), Time.fixedDeltaTime * (1 - burnoutSmoothness) * 10);

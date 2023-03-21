@@ -131,7 +131,7 @@ public void changeJoystickAxis()
         {
             Debug.Log("axis0: "+Input.GetAxis("joy_0_axis_0")); //correct
             Debug.Log("start scanning");
-            Debug.Log(InputManager.GetAxis("Throttle")); //correct
+            //Debug.Log(InputManager.GetAxis("Throttle")); //correct
             Debug.Log(result.JoystickAxisValue);
             InputAction inputAction = InputManager.GetAction("CustomControls", ButtonAction);
             //inputAction.Bindings[0].Axis = InputManager.GetAxis("Throttle");

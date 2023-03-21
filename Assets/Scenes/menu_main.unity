@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -621,6 +621,9 @@ GameObject:
   - component: {fileID: 472468592}
   - component: {fileID: 472468591}
   - component: {fileID: 472468593}
+  - component: {fileID: 472468596}
+  - component: {fileID: 472468595}
+  - component: {fileID: 472468594}
   m_Layer: 0
   m_Name: Input Manager
   m_TagString: Untagged
@@ -647,139 +650,6 @@ MonoBehaviour:
 '
     m_isExpanded: 1
     m_uniqueID: cc180629edad41a2ba53854ba7678c88
-    m_actions:
-    - m_name: UI_Up
-      m_description: 
-      m_bindings:
-      - m_positive: 273
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: UI_Down
-      m_description: 
-      m_bindings:
-      - m_positive: 0
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: UI_Left
-      m_description: 
-      m_bindings:
-      - m_positive: 276
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: UI_Right
-      m_description: 
-      m_bindings:
-      - m_positive: 275
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: UI_Submit
-      m_description: 
-      m_bindings:
-      - m_positive: 13
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: UI_Cancel
-      m_description: 
-      m_bindings:
-      - m_positive: 27
-        m_negative: 0
-        m_deadZoneType: 0
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 0
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-    - m_name: Throttle
-      m_description: 
-      m_bindings:
-      - m_positive: 273
-        m_negative: 0
-        m_deadZoneType: 1
-        m_deadZone: 0
-        m_gravity: 1
-        m_sensitivity: 1
-        m_scale: 1
-        m_snap: 0
-        m_invert: 0
-        m_type: 6
-        m_axis: 0
-        m_joystick: 0
-        m_gamepadButton: 0
-        m_gamepadAxis: 0
-        m_gamepadIndex: 0
-  - m_name: CustomControls
-    m_description: 'default
-
-'
-    m_isExpanded: 1
-    m_uniqueID: 2b8fc32951fc4ddda5b8f8f9dd8346d6
     m_actions:
     - m_name: UI_Up
       m_description: 
@@ -889,10 +759,683 @@ MonoBehaviour:
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
-    - m_name: Throttle
+    - m_name: Accel
       m_description: 
       m_bindings:
       - m_positive: 273
+        m_negative: 0
+        m_deadZoneType: 1
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Restart
+      m_description: 
+      m_bindings:
+      - m_positive: 114
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Camera X
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Camera Y
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Spin
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Brake
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 3
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Change Property
+      m_description: 
+      m_bindings:
+      - m_positive: 99
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Jump
+      m_description: 
+      m_bindings:
+      - m_positive: 32
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Reset Position
+      m_description: 
+      m_bindings:
+      - m_positive: 114
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Reset Rotation
+      m_description: 
+      m_bindings:
+      - m_positive: 109
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Ebrake
+      m_description: 
+      m_bindings:
+      - m_positive: 101
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Boost
+      m_description: 
+      m_bindings:
+      - m_positive: 98
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Upshift
+      m_description: 
+      m_bindings:
+      - m_positive: 117
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Downshift
+      m_description: 
+      m_bindings:
+      - m_positive: 100
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Horizontal
+      m_description: Steer
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Vertical
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+  - m_name: CustomControls
+    m_description: 'default
+
+'
+    m_isExpanded: 1
+    m_uniqueID: 495d00ab0bd14683a98ed6f6fc751fa1
+    m_actions:
+    - m_name: UI_Up
+      m_description: 
+      m_bindings:
+      - m_positive: 273
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: UI_Down
+      m_description: 
+      m_bindings:
+      - m_positive: 274
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: UI_Left
+      m_description: 
+      m_bindings:
+      - m_positive: 276
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: UI_Right
+      m_description: 
+      m_bindings:
+      - m_positive: 275
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: UI_Submit
+      m_description: 
+      m_bindings:
+      - m_positive: 13
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: UI_Cancel
+      m_description: 
+      m_bindings:
+      - m_positive: 27
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Accel
+      m_description: 
+      m_bindings:
+      - m_positive: 273
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Restart
+      m_description: 
+      m_bindings:
+      - m_positive: 114
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Camera X
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Camera Y
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Spin
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Brake
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 3
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Change Property
+      m_description: 
+      m_bindings:
+      - m_positive: 99
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Jump
+      m_description: 
+      m_bindings:
+      - m_positive: 32
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Reset Position
+      m_description: 
+      m_bindings:
+      - m_positive: 114
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Reset Rotation
+      m_description: 
+      m_bindings:
+      - m_positive: 109
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Ebrake
+      m_description: 
+      m_bindings:
+      - m_positive: 101
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Boost
+      m_description: 
+      m_bindings:
+      - m_positive: 98
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Upshift
+      m_description: 
+      m_bindings:
+      - m_positive: 117
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Downshift
+      m_description: 
+      m_bindings:
+      - m_positive: 100
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Horizontal
+      m_description: Steer
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 6
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Vertical
+      m_description: 
+      m_bindings:
+      - m_positive: 0
         m_negative: 0
         m_deadZoneType: 0
         m_deadZone: 0
@@ -941,6 +1484,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 
+--- !u!114 &472468594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472468590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf92e57a9edd9af4caa9b9985e3a1453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelAxis: 
+  brakeAxis: 
+  steerAxis: 
+  ebrakeAxis: 
+  boostButton: 
+  upshiftButton: 
+  downshiftButton: 
+  pitchAxis: 
+  yawAxis: 
+  rollAxis: 
+--- !u!114 &472468595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472468590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e173e117282a9d41a1c848fb0281a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelAxisIsBrake: 0
+  brakeIsReverse: 0
+  holdEbrakePark: 0
+  burnoutThreshold: 0.9
+  burnoutSpin: 5
+  burnoutSmoothness: 0.5
+  engine: {fileID: 0}
+  wheels: []
+  hoverWheels: []
+  wheelGroups: []
+  hover: 0
+  suspensionCenterOfMass: 0
+  centerOfMassOffset: {x: 0, y: 0, z: 0}
+  wheelForceMode: 5
+  suspensionForceMode: 5
+  towVehicle: {fileID: 0}
+  canCrash: 1
+  crashSnd: {fileID: 0}
+  crashClips: []
+  sparks: {fileID: 0}
+  cameraDistanceChange: 0
+  cameraHeightChange: 0
+--- !u!54 &472468596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472468590}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &492660662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,7 +2154,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: menu_start
+          m_StringArgument: Assets_vehicle/Scenes/Demo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &671807979

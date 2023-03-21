@@ -23529,6 +23529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396823866}
   - component: {fileID: 396823865}
+  - component: {fileID: 396823867}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -23613,6 +23614,26 @@ Transform:
   m_Father: {fileID: 1732027929}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396823867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396823864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &409571030
 GameObject:
   m_ObjectHideFlags: 0
@@ -61961,8 +61982,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1002468052}
   - component: {fileID: 1002468051}
-  - component: {fileID: 1002468050}
   - component: {fileID: 1002468049}
+  - component: {fileID: 1002468053}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -61984,26 +62005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
   m_ForceModuleActive: 0
---- !u!114 &1002468050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002468048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1002468051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62016,7 +62017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1432590463}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &1002468052
@@ -62034,6 +62035,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002468053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002468048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb136099cc3379144a392d48c3cce324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_UpButton: UI_Up
+  m_DownButton: UI_Down
+  m_LeftButton: UI_Left
+  m_RightButton: UI_Right
+  m_SubmitButton: UI_Submit
+  m_CancelButton: UI_Cancel
+  m_ForceModuleActive: 0
 --- !u!1 &1002724645
 GameObject:
   m_ObjectHideFlags: 0
@@ -87753,7 +87774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf92e57a9edd9af4caa9b9985e3a1453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelAxis: Accel2
+  accelAxis: 
   brakeAxis: 
   steerAxis: 
   ebrakeAxis: 

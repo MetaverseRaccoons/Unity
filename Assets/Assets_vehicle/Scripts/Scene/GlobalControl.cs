@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Luminosity.IO;
 
 namespace RVP
 {
@@ -67,7 +68,7 @@ namespace RVP
         void Update() {
             // Quickly restart scene with a button press
             if (quickRestart) {
-                if (Input.GetButtonDown("Restart")) {
+                if (InputManager.GetButtonDown("Restart")) {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     Time.timeScale = 1;
                     Time.fixedDeltaTime = initialFixedTime;

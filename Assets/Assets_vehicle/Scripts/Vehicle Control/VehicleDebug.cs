@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Luminosity.IO;
 
 namespace RVP
 {
@@ -16,11 +17,11 @@ namespace RVP
         public float fallLimit = -10;
 
         void Update() {
-            if (Input.GetButtonDown("Reset Rotation")) {
+            if (InputManager.GetButtonDown("Reset Rotation")) {
                 StartCoroutine(ResetRotation());
             }
 
-            if (Input.GetButtonDown("Reset Position") || transform.position.y < fallLimit) {
+            if (InputManager.GetButtonDown("Reset Position") || transform.position.y < fallLimit) {
                 StartCoroutine(ResetPosition());
             }
         }
