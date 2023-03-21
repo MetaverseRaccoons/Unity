@@ -22,7 +22,8 @@ namespace RVP
         void FixedUpdate() {
             // Set camera rotation input if the input axes are valid
             if (cam && !string.IsNullOrEmpty(xInputAxis) && !string.IsNullOrEmpty(yInputAxis)) {
-                cam.SetInput(InputManager.GetAxis(xInputAxis), InputManager.GetAxis(yInputAxis));
+                //cam.SetInput(InputManager.GetAxis(xInputAxis), InputManager.GetAxis(yInputAxis));
+                cam.SetInput(0,0);
             }
         }
     }

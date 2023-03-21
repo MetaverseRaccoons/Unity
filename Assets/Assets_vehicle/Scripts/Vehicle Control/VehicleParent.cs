@@ -42,7 +42,7 @@ namespace RVP
         [System.NonSerialized]
         public float rollInput;
         [System.NonSerialized]
-        public bool[] gearPressed = new bool[6];
+        public bool[] gearPressed = new bool[7];
 
         [Tooltip("Accel axis is used for brake input")]
         public bool accelAxisIsBrake;
@@ -326,6 +326,9 @@ namespace RVP
         }
         public void PressGear6() {
             gearPressed[5] = true;
+        }
+        public void PressReverse() {
+            gearPressed[6] = true;
         }
 
         // Set held upshift input

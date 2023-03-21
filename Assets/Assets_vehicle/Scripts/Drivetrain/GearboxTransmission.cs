@@ -74,6 +74,9 @@ namespace RVP
                 } else if (vp.gearPressed[5] && currentGear < gears.Length) {
                     ShiftToGear(7);
                     vp.gearPressed[5] = false;
+                } else if (vp.gearPressed[6] && currentGear < gears.Length) {
+                    ShiftToGear(0);
+                    vp.gearPressed[6] = false;
                 }
             }
         }

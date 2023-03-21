@@ -50,6 +50,9 @@ namespace RVP
             if (InputManager.GetButtonDown("Gear6") && clutch) {
                 vp.PressGear6();
             }
+            if (InputManager.GetButtonDown("Reverse") && clutch) {
+                vp.PressReverse();
+            }
             
             // Get single-frame input presses
             if (!string.IsNullOrEmpty(upshiftButton)) {

@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelAxisIsBrake: 0
-  brakeIsReverse: 1
+  brakeIsReverse: 0
   holdEbrakePark: 1
   burnoutThreshold: 0.9
   burnoutSpin: 3
@@ -70352,7 +70352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelAxisIsBrake: 0
-  brakeIsReverse: 1
+  brakeIsReverse: 0
   holdEbrakePark: 1
   burnoutThreshold: 0.9
   burnoutSpin: 3
