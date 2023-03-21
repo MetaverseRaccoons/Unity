@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1851,7 +1851,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 204257550}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3764,7 +3764,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 388063785}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickAxis
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4820,7 +4820,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 511073079}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5417,7 +5417,7 @@ GameObject:
   - component: {fileID: 715645373}
   - component: {fileID: 715645372}
   m_Layer: 5
-  m_Name: SBSubmitKey
+  m_Name: SBSteer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6018,7 +6018,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 776082971}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7128,7 +7128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Submit
+  m_text: Steer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7155,7 +7155,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.25
+  m_fontSize: 39.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8091,7 +8091,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1326997245}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8910,7 +8910,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1377447874}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9502,7 +9502,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1423066449}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11585,7 +11585,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1875774302}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12189,7 +12189,7 @@ GameObject:
   - component: {fileID: 2060861203}
   - component: {fileID: 2060861202}
   m_Layer: 5
-  m_Name: submit_btn
+  m_Name: steer_axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12228,7 +12228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Submit
+  ButtonAction: Horizontal
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -12584,7 +12584,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2060861202}
         m_TargetAssemblyTypeName: SettingButtonBehaviour, Assembly-CSharp
-        m_MethodName: changeKey
+        m_MethodName: changeJoystickAxis
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

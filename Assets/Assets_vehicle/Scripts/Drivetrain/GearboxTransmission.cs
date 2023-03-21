@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 namespace RVP
 {
@@ -53,6 +54,26 @@ namespace RVP
 
                 if (vp.downshiftPressed && currentGear > 0) {
                     Shift(-1);
+                }
+
+                if (vp.gearPressed[0] && currentGear < gears.Length) {
+                    ShiftToGear(2);
+                    vp.gearPressed[0] = false;
+                } else if (vp.gearPressed[1] && currentGear < gears.Length) {
+                    ShiftToGear(3);
+                    vp.gearPressed[1] = false;
+                } else if (vp.gearPressed[2] && currentGear < gears.Length) {
+                    ShiftToGear(4);
+                    vp.gearPressed[2] = false;
+                } else if (vp.gearPressed[3] && currentGear < gears.Length) {
+                    ShiftToGear(5);
+                    vp.gearPressed[3] = false;
+                } else if (vp.gearPressed[4] && currentGear < gears.Length) {
+                    ShiftToGear(6);
+                    vp.gearPressed[4] = false;
+                } else if (vp.gearPressed[5] && currentGear < gears.Length) {
+                    ShiftToGear(7);
+                    vp.gearPressed[5] = false;
                 }
             }
         }

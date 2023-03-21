@@ -8,6 +8,6 @@ public class ControlsLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InputManager.Load();
+        InputManager.Load();
     }
 }

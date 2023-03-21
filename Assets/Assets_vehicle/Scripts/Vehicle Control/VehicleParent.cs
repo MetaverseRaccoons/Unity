@@ -41,6 +41,8 @@ namespace RVP
         public float yawInput;
         [System.NonSerialized]
         public float rollInput;
+        [System.NonSerialized]
+        public bool[] gearPressed = new bool[6];
 
         [Tooltip("Accel axis is used for brake input")]
         public bool accelAxisIsBrake;
@@ -245,13 +247,15 @@ namespace RVP
 
         // Set accel input
         public void SetAccel(float f) {
-            f = Mathf.Clamp(f, -1, 1);
+            //f = Mathf.Clamp(f, -1, 1);
+            f = (f + 1) / 2;
             accelInput = f;
         }
 
         // Set brake input
         public void SetBrake(float f) {
-            brakeInput = accelAxisIsBrake ? -Mathf.Clamp(accelInput, -1, 0) : Mathf.Clamp(f, -1, 1);
+            //brakeInput = accelAxisIsBrake ? -Mathf.Clamp(accelInput, -1, 0) : Mathf.Clamp(f, -1, 1);
+            brakeInput = (f+1)/2;
         }
 
         // Set steer input
@@ -297,6 +301,31 @@ namespace RVP
         // Do downshift input
         public void PressDownshift() {
             downshiftPressed = true;
+        }
+
+        public void PressGear0() {
+            Debug.Log("zero pressed");
+            for (int i=0; i < gearPressed.Length; i++) {
+                gearPressed[i] = false;
+            }
+        }
+        public void PressGear1() {
+            gearPressed[0] = true;
+        }
+        public void PressGear2() {
+            gearPressed[1] = true;
+        }
+        public void PressGear3() {
+            gearPressed[2] = true;
+        }
+        public void PressGear4() {
+            gearPressed[3] = true;
+        }
+        public void PressGear5() {
+            gearPressed[4] = true;
+        }
+        public void PressGear6() {
+            gearPressed[5] = true;
         }
 
         // Set held upshift input

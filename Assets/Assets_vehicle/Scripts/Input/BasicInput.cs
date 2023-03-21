@@ -22,12 +22,34 @@ namespace RVP
         public string pitchAxis;
         public string yawAxis;
         public string rollAxis;
+        public bool clutch;
 
         void Start() {
             vp = GetComponent<VehicleParent>();
         }
 
         void Update() {
+
+            clutch = InputManager.GetAxis("Vertical") > 0.5f ? false : true;
+            
+            if (InputManager.GetButtonDown("Gear1") && clutch) {
+                vp.PressGear1();
+            }
+            if (InputManager.GetButtonDown("Gear2") && clutch) {
+                vp.PressGear2();
+            }
+            if (InputManager.GetButtonDown("Gear3") && clutch) {
+                vp.PressGear3();
+            }
+            if (InputManager.GetButtonDown("Gear4") && clutch) {
+                vp.PressGear4();
+            }
+            if (InputManager.GetButtonDown("Gear5") && clutch) {
+                vp.PressGear5();
+            }
+            if (InputManager.GetButtonDown("Gear6") && clutch) {
+                vp.PressGear6();
+            }
             
             // Get single-frame input presses
             if (!string.IsNullOrEmpty(upshiftButton)) {
@@ -52,7 +74,7 @@ namespace RVP
             if (!string.IsNullOrEmpty(accelAxis)) {
                 //vp.SetAccel(Input.GetAxis(accelAxis));
                 vp.SetAccel(InputManager.GetAxis(accelAxis));
-                Debug.Log("accelAxis: " + accelAxis + " value: " + InputManager.GetAxis(accelAxis));
+                //Debug.Log("accelAxis: " + accelAxis + " value: " + InputManager.GetAxis(accelAxis));
             }
 
             if (!string.IsNullOrEmpty(brakeAxis)) {
@@ -74,7 +96,7 @@ namespace RVP
                 //vp.SetBoost(Input.GetButton(boostButton));
                 vp.SetBoost(InputManager.GetButton(boostButton));
             }
-
+            // pitch axis is for motor sound
             if (!string.IsNullOrEmpty(pitchAxis)) {
                 //vp.SetPitch(Input.GetAxis(pitchAxis));
                 vp.SetPitch(InputManager.GetAxis(pitchAxis));

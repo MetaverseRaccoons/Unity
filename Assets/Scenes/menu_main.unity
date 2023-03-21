@@ -770,10 +770,10 @@ MonoBehaviour:
         m_sensitivity: 1
         m_scale: 1
         m_snap: 0
-        m_invert: 0
+        m_invert: 1
         m_type: 6
-        m_axis: 0
-        m_joystick: 0
+        m_axis: 2
+        m_joystick: 2
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
         m_sensitivity: 1
         m_scale: 1
         m_snap: 0
-        m_invert: 0
+        m_invert: 1
         m_type: 6
         m_axis: 3
         m_joystick: 0
@@ -1024,8 +1024,8 @@ MonoBehaviour:
         m_snap: 0
         m_invert: 0
         m_type: 6
-        m_axis: 0
-        m_joystick: 0
+        m_axis: 1
+        m_joystick: 2
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
@@ -1047,12 +1047,120 @@ MonoBehaviour:
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
+    - m_name: Gear1
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear2
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear3
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear4
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear5
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear6
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
   - m_name: CustomControls
     m_description: 'default
 
 '
     m_isExpanded: 1
-    m_uniqueID: 495d00ab0bd14683a98ed6f6fc751fa1
+    m_uniqueID: 329dfdc4658c4a4e8ccfa002bffc49da
     m_actions:
     - m_name: UI_Up
       m_description: 
@@ -1167,13 +1275,13 @@ MonoBehaviour:
       m_bindings:
       - m_positive: 273
         m_negative: 0
-        m_deadZoneType: 0
+        m_deadZoneType: 1
         m_deadZone: 0
         m_gravity: 1
         m_sensitivity: 1
         m_scale: 1
         m_snap: 0
-        m_invert: 0
+        m_invert: 1
         m_type: 6
         m_axis: 0
         m_joystick: 0
@@ -1263,7 +1371,7 @@ MonoBehaviour:
         m_sensitivity: 1
         m_scale: 1
         m_snap: 0
-        m_invert: 0
+        m_invert: 1
         m_type: 6
         m_axis: 3
         m_joystick: 0
@@ -1427,8 +1535,8 @@ MonoBehaviour:
         m_snap: 0
         m_invert: 0
         m_type: 6
-        m_axis: 0
-        m_joystick: 0
+        m_axis: 1
+        m_joystick: 2
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
@@ -1450,7 +1558,115 @@ MonoBehaviour:
         m_gamepadButton: 0
         m_gamepadAxis: 0
         m_gamepadIndex: 0
-  m_playerOneDefault: 2b8fc32951fc4ddda5b8f8f9dd8346d6
+    - m_name: Gear1
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear2
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear3
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear4
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear5
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+    - m_name: Gear6
+      m_description: 
+      m_bindings:
+      - m_positive: 0
+        m_negative: 0
+        m_deadZoneType: 0
+        m_deadZone: 0
+        m_gravity: 1
+        m_sensitivity: 1
+        m_scale: 1
+        m_snap: 0
+        m_invert: 0
+        m_type: 0
+        m_axis: 0
+        m_joystick: 0
+        m_gamepadButton: 0
+        m_gamepadAxis: 0
+        m_gamepadIndex: 0
+  m_playerOneDefault: 329dfdc4658c4a4e8ccfa002bffc49da
   m_playerTwoDefault: 
   m_playerThreeDefault: 
   m_playerFourDefault: 
@@ -1506,6 +1722,7 @@ MonoBehaviour:
   pitchAxis: 
   yawAxis: 
   rollAxis: 
+  clutch: 0
 --- !u!114 &472468595
 MonoBehaviour:
   m_ObjectHideFlags: 0
