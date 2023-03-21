@@ -3,6 +3,7 @@ using System.Collections; // IEnumerator
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking; // API Requests
+// using UnityEngine.CoreModule; // PlayerPrefs
 using Newtonsoft.Json.Linq; // Json Deserializing
 
 /// <summary>
@@ -17,7 +18,6 @@ public class LoginController : BackEndController
     public IEnumerator RequestLogin(string username, string password)
     {
         string uri = base.server.getFullLoginUri();
-        Debug.Log(uri);
 
         WWWForm form = new WWWForm();
         form.AddField("username", username);
@@ -30,7 +30,6 @@ public class LoginController : BackEndController
             if (www.result != UnityWebRequest.Result.Success) {
                 Debug.Log(www.error);
             } else {
-                Debug.Log("Form upload complete!");
                 JsonHandler(www.downloadHandler.text);
             }
         }
@@ -41,6 +40,8 @@ public class LoginController : BackEndController
         JObject jobject = JObject.Parse(jsonString);
         JToken refreshCode = jobject["refresh"];
         JToken accessCode = jobject["access"];
-        LoginControllerObj.AddComponent<Credentials>(refreshCode, accessCode);
+        PlayerPrefs.SetString("refresh", refreshCode.ToString());
+        PlayerPrefs.SetString("access", accessCode.ToString());
+        Debug.Log("User credentials successfully saved in PlayerPrefs.");
     }
 }

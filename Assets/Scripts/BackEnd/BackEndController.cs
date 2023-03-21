@@ -33,6 +33,7 @@ public class Server
 {
     public string uri  { get; set; }
     public static string LoginUri = "/api/token/"; 
+    public static string ViolationUri = "/api/violation";
 
     public Server(){}
 

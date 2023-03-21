@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-using System.Reflection; // ChangeType()
 using UnityEngine.Networking; // API Requests
+using System.Reflection; // ChangeType()
 using Newtonsoft.Json.Linq; // Json Deserializing
 
 public class User
@@ -104,6 +103,7 @@ public class KeyboardScript : MonoBehaviour
         EngLayoutSml.SetActive(true);
     }
 
+
     /* Retrieves input from both textfields and calls Login function */
     public void AttemptLogin()
     {
@@ -111,13 +111,11 @@ public class KeyboardScript : MonoBehaviour
         string password = PasswordTextField.text.ToString();
         LoginController lc = LoginControllerObj.AddComponent<LoginController>();
         lc.server.setUri("http://127.0.0.1:8000");
-
-        // StartCoroutine(RequestCreateUser());
-        // "user1", "passwordDries1"
-        StartCoroutine(lc.RequestLogin(username, password));
+        StartCoroutine(lc.RequestLogin("user1", "passwordDries1"));
     }
 
     public IEnumerator RequestCreateUser()
+    // Needs to be run with a Coroutine!
     {
         User user = new User(
             "user1",
