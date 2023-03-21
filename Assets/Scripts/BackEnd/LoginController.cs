@@ -11,31 +11,36 @@ using Newtonsoft.Json.Linq; // Json Deserializing
 public class LoginController : BackEndController
 {
     public LoginController() : base()
-    {
-    }
+    {}
 
-    /* Sends POST request to server to login and receives a new refresh string if succesful */
-    public IEnumerator RequestLogin(string username, string password) {
-        string uri = base.server.getLoginUri();
+    /* Sends a 'login' request to the server */
+    public IEnumerator RequestLogin(string username, string password)
+    {
+        string uri = base.server.getFullLoginUri();
+        Debug.Log(uri);
 
         WWWForm form = new WWWForm();
         form.AddField("username", username);
         form.AddField("password", password);
-        var request = UnityWebRequest.Post(uri, form);
-        CoroutineWithData<string> cr = new CoroutineWithData<string>(this, base.DLHResponseHandler(request));
-        yield return cr.Coroutine;
 
-        JsonHandler(cr.result);
+        using (UnityWebRequest www = UnityWebRequest.Post(uri, form))
+        {
+            www.downloadHandler = new DownloadHandlerBuffer();
+            yield return www.SendWebRequest();
+            if (www.result != UnityWebRequest.Result.Success) {
+                Debug.Log(www.error);
+            } else {
+                Debug.Log("Form upload complete!");
+                JsonHandler(www.downloadHandler.text);
+            }
+        }
     }
 
-    /* Parses json request from API call "create user" to retrieve the refresh code and add it to the User class instance */
+    /* Retrieves refresh and access codes after 'login' API call and adds them to the LoginControllerObj in the form of a Credentials instance. */
     public void JsonHandler(string jsonString) {
         JObject jobject = JObject.Parse(jsonString);
         JToken refreshCode = jobject["refresh"];
         JToken accessCode = jobject["access"];
-        Debug.Log(refreshCode.ToString());
-        Debug.Log(accessCode.ToString());
-        //TODO save codes refreshCode.ToString()
+        LoginControllerObj.AddComponent<Credentials>(refreshCode, accessCode);
     }
-
 }
