@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1456,7 +1456,7 @@ GameObject:
   - component: {fileID: 204257551}
   - component: {fileID: 204257550}
   m_Layer: 5
-  m_Name: down_btn
+  m_Name: gear3_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Down
+  ButtonAction: Gear3
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -1957,9 +1957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left
-
-'
+  m_text: Gear 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1986,7 +1984,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2229,9 +2227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Down
-
-'
+  m_text: Gear 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2258,7 +2254,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.3
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2916,7 +2912,7 @@ GameObject:
   - component: {fileID: 383806687}
   - component: {fileID: 383806686}
   m_Layer: 5
-  m_Name: down_btn
+  m_Name: brake_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3373,7 +3369,7 @@ GameObject:
   - component: {fileID: 388063786}
   - component: {fileID: 388063785}
   m_Layer: 5
-  m_Name: left_btn
+  m_Name: clutch_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3412,7 +3408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Left
+  ButtonAction: Vertical
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -4358,7 +4354,7 @@ GameObject:
   - component: {fileID: 483224644}
   - component: {fileID: 483224643}
   m_Layer: 5
-  m_Name: SBSubmitKey (2)
+  m_Name: SBGear6Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4379,7 +4375,7 @@ RectTransform:
   - {fileID: 776082970}
   - {fileID: 1798425097}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4429,7 +4425,7 @@ GameObject:
   - component: {fileID: 511073080}
   - component: {fileID: 511073079}
   m_Layer: 5
-  m_Name: up_btn
+  m_Name: gear2_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4468,7 +4464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Up
+  ButtonAction: Gear2
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -5217,7 +5213,7 @@ GameObject:
   - component: {fileID: 629443034}
   - component: {fileID: 629443033}
   m_Layer: 5
-  m_Name: SBBackKey (1)
+  m_Name: SBBrakeKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5238,7 +5234,7 @@ RectTransform:
   - {fileID: 383806685}
   - {fileID: 647264850}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5332,9 +5328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Down
-
-'
+  m_text: Brake
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5361,7 +5355,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.3
+  m_fontSize: 36.15
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5629,7 +5623,7 @@ GameObject:
   - component: {fileID: 776082972}
   - component: {fileID: 776082971}
   m_Layer: 5
-  m_Name: submit_btn
+  m_Name: gear6_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5668,7 +5662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Submit
+  ButtonAction: Gear6
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -6290,7 +6284,7 @@ GameObject:
   - component: {fileID: 923834618}
   - component: {fileID: 923834617}
   m_Layer: 5
-  m_Name: SBLeftKey (1)
+  m_Name: SBClutchKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6311,7 +6305,7 @@ RectTransform:
   - {fileID: 388063784}
   - {fileID: 1406687670}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6359,7 +6353,7 @@ GameObject:
   - component: {fileID: 943754304}
   - component: {fileID: 943754303}
   m_Layer: 5
-  m_Name: SBRightKey (2)
+  m_Name: SBGear5Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6380,7 +6374,7 @@ RectTransform:
   - {fileID: 1326997244}
   - {fileID: 2034865243}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6592,9 +6586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Right
-
-'
+  m_text: Reverse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6621,7 +6613,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.6
+  m_fontSize: 25.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7225,7 +7217,7 @@ GameObject:
   - component: {fileID: 1241293606}
   - component: {fileID: 1241293605}
   m_Layer: 5
-  m_Name: SBSubmitKey (1)
+  m_Name: SBGear1Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7246,7 +7238,7 @@ RectTransform:
   - {fileID: 1875774301}
   - {fileID: 1863557602}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7450,7 +7442,7 @@ RectTransform:
   - {fileID: 1467430204}
   - {fileID: 1853452888}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7633,7 +7625,7 @@ GameObject:
   - component: {fileID: 1286586949}
   - component: {fileID: 1286586948}
   m_Layer: 5
-  m_Name: SBForwardKey (2)
+  m_Name: SBGear2Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7646,7 +7638,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286586946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.015395814, y: 0.015395814, z: 0.015395814}
   m_ConstrainProportionsScale: 0
@@ -7654,11 +7646,11 @@ RectTransform:
   - {fileID: 511073078}
   - {fileID: 1941602408}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.92, y: 1.5700002}
+  m_AnchoredPosition: {x: 3.919983, y: 1.5699999}
   m_SizeDelta: {x: 188, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1286586948
@@ -7704,7 +7696,7 @@ GameObject:
   - component: {fileID: 1326997246}
   - component: {fileID: 1326997245}
   m_Layer: 5
-  m_Name: right_btn
+  m_Name: gear5_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7743,7 +7735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Right
+  ButtonAction: Gear5
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -8317,16 +8309,16 @@ RectTransform:
   - {fileID: 905790838}
   - {fileID: 1812721594}
   - {fileID: 715645371}
+  - {fileID: 1256036648}
   - {fileID: 629443032}
   - {fileID: 923834616}
   - {fileID: 2015039822}
   - {fileID: 1241293604}
-  - {fileID: 1256036648}
+  - {fileID: 1286586947}
   - {fileID: 1501075956}
   - {fileID: 1845981403}
   - {fileID: 943754302}
   - {fileID: 483224642}
-  - {fileID: 1286586947}
   - {fileID: 724024661}
   m_Father: {fileID: 1676872276}
   m_RootOrder: 1
@@ -8523,7 +8515,7 @@ GameObject:
   - component: {fileID: 1377447875}
   - component: {fileID: 1377447874}
   m_Layer: 5
-  m_Name: left_btn
+  m_Name: gear4_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8562,7 +8554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Left
+  ButtonAction: Gear4
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -9024,9 +9016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left
-
-'
+  m_text: Clutch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9053,7 +9043,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 33.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9117,7 +9107,7 @@ GameObject:
   - component: {fileID: 1423066450}
   - component: {fileID: 1423066449}
   m_Layer: 5
-  m_Name: right_btn
+  m_Name: steer_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9156,7 +9146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Right
+  ButtonAction: Horizontal
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -10233,7 +10223,7 @@ GameObject:
   - component: {fileID: 1501075958}
   - component: {fileID: 1501075957}
   m_Layer: 5
-  m_Name: SBBackKey (2)
+  m_Name: SBGear3Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10254,7 +10244,7 @@ RectTransform:
   - {fileID: 204257549}
   - {fileID: 306490958}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10562,7 +10552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Submit
+  m_text: Gear 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10589,7 +10579,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.25
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10720,7 +10710,7 @@ GameObject:
   - component: {fileID: 1845981405}
   - component: {fileID: 1845981404}
   m_Layer: 5
-  m_Name: SBLeftKey (2)
+  m_Name: SBGear4Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10741,7 +10731,7 @@ RectTransform:
   - {fileID: 1377447873}
   - {fileID: 228467756}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11063,7 +11053,7 @@ GameObject:
   - component: {fileID: 1863557604}
   - component: {fileID: 1863557603}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gear 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11109,7 +11099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Submit
+  m_text: Gear 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11136,7 +11126,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.25
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11200,7 +11190,7 @@ GameObject:
   - component: {fileID: 1875774303}
   - component: {fileID: 1875774302}
   m_Layer: 5
-  m_Name: submit_btn
+  m_Name: gear1_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11239,7 +11229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8df64ca1e75edc4793550c789d2084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAction: UI_Submit
+  ButtonAction: Gear1
   axisList:
   - joy_0_axis_0
   - joy_0_axis_1
@@ -11904,9 +11894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Up
-
-'
+  m_text: Gear 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11933,7 +11921,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11995,7 +11983,7 @@ GameObject:
   - component: {fileID: 2015039824}
   - component: {fileID: 2015039823}
   m_Layer: 5
-  m_Name: SBRightKey (1)
+  m_Name: SBReverseKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12016,7 +12004,7 @@ RectTransform:
   - {fileID: 1423066448}
   - {fileID: 999427925}
   m_Father: {fileID: 1347817511}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -12110,9 +12098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Right
-
-'
+  m_text: Gear 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12139,7 +12125,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.6
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
