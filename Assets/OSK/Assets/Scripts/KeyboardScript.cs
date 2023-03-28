@@ -109,9 +109,10 @@ public class KeyboardScript : MonoBehaviour
     {
         string username = UsernameTextField.text.ToString();
         string password = PasswordTextField.text.ToString();
-        LoginController lc = LoginControllerObj.AddComponent<LoginController>();
-        lc.server.setUri("http://127.0.0.1:8000");
-        StartCoroutine(lc.RequestLogin("user1", "passwordDries1"));
+        
+        GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+        GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+        StartCoroutine(gc.lc.RequestLogin("user1", "passwordDries1"));
     }
 
     public IEnumerator RequestCreateUser()

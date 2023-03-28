@@ -33,21 +33,25 @@ public class Server
 {
     public string uri  { get; set; }
     public static string LoginUri = "/api/token/"; 
-    public static string ViolationUri = "/api/violation";
+    public static string ViolationUri = "/api/violation/";
 
-    public Server(){}
+    public Server()
+    {
+        this.uri = "http://127.0.0.1:8000";
+    }
 
     public void setUri(string uri) {
         this.uri = uri;
     }
 
     public string getLoginUri() {
-        return LoginUri;
-    }
-
-    public string getFullLoginUri() {
         return uri + LoginUri;
     }
+
+    public string getViolationUri() {
+        return uri + ViolationUri;
+    }
+
 }
 
 /// <summary>

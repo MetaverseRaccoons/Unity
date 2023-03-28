@@ -11,12 +11,6 @@ public class ViolationsScript : MonoBehaviour
     public Button button;
     public GameObject ViolationsControllerObj;  // ViolationsController script needs to be attached to a GameObject
 
-    public void AddViolation()
-    {
-        button.Select();
-        ViolationsController vc = ViolationsControllerObj.AddComponent<ViolationsController>();
-        StartCoroutine(vc.RequestAddViolation("speeding", "0.75", "Speeding in a 30km/h zone"));
-    }
 }
 
 
@@ -31,7 +25,10 @@ public class ViolationsController : BackEndController
     /* Sends a 'add violation' request to the server */
     public IEnumerator RequestAddViolation(string type, string severity, string description)
     {
-        string uri = base.server.getFullLoginUri();
+        string uri = base.server.getViolationUri();
+        Debug.Log("uri: " + uri);
+
+        string access = PlayerPrefs.GetString("access");
 
         WWWForm form = new WWWForm();
         form.AddField("type", type);
@@ -40,6 +37,7 @@ public class ViolationsController : BackEndController
 
         using (UnityWebRequest www = UnityWebRequest.Post(uri, form))
         {
+            www.SetRequestHeader("Authorization", "Bearer " + access);
             www.downloadHandler = new DownloadHandlerBuffer();
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success) {

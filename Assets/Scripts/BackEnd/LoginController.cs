@@ -17,7 +17,7 @@ public class LoginController : BackEndController
     /* Sends a 'login' request to the server */
     public IEnumerator RequestLogin(string username, string password)
     {
-        string uri = base.server.getFullLoginUri();
+        string uri = base.server.getLoginUri();
 
         WWWForm form = new WWWForm();
         form.AddField("username", username);
