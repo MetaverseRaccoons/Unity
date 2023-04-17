@@ -26,7 +26,6 @@ public class ViolationsController : BackEndController
     public IEnumerator RequestAddViolation(string type, string severity, string description)
     {
         string uri = base.server.getViolationUri();
-        Debug.Log("uri: " + uri);
 
         string access = PlayerPrefs.GetString("access");
 
