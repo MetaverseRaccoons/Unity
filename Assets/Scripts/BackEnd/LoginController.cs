@@ -35,13 +35,24 @@ public class LoginController : BackEndController
         }
     }
 
-    /* Retrieves refresh and access codes after 'login' API call and adds them to the LoginControllerObj in the form of a Credentials instance. */
+    /* Retrieves refresh and access codes from `jsonString`, encrypts them and saves them in PlayerPrefs. */
     public void JsonHandler(string jsonString) {
         JObject jobject = JObject.Parse(jsonString);
         JToken refreshCode = jobject["refresh"];
         JToken accessCode = jobject["access"];
-        PlayerPrefs.SetString("refresh", refreshCode.ToString());
-        PlayerPrefs.SetString("access", accessCode.ToString());
+
+        // encode access and refresh string
+        GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+        GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+        byte[] refresh_encoded = gc.ec.EncryptStringToBytes_Aes(refreshCode.ToString(), gc.aes.Key, gc.aes.IV);
+        byte[] access_encoded = gc.ec.EncryptStringToBytes_Aes(accessCode.ToString(), gc.aes.Key, gc.aes.IV);
+
+        // save access and refresh to PlayerPrefs
+        PlayerPrefs.SetString("refresh", Convert.ToBase64String(refresh_encoded));
+        PlayerPrefs.SetString("access", Convert.ToBase64String(access_encoded));
         Debug.Log("User credentials successfully saved in PlayerPrefs.");
+
+        // Debug.Log("refresh: " + refreshCode.ToString());
+        // Debug.Log("refresh encoded: " + PlayerPrefs.GetString("refresh"));
     }
 }

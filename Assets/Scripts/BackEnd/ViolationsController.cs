@@ -6,16 +6,9 @@ using UnityEngine.UI;
 using UnityEngine.Networking; // API Requests
 using Newtonsoft.Json.Linq; // Json Deserializing
 
-public class ViolationsScript : MonoBehaviour
-{
-    public Button button;
-    public GameObject ViolationsControllerObj;  // ViolationsController script needs to be attached to a GameObject
-
-}
-
 
 /// <summary>
-///  This class controls login communication with the backend server.
+///  This class controls violations communication with the backend server.
 /// </summary>
 public class ViolationsController : BackEndController
 {
@@ -27,7 +20,11 @@ public class ViolationsController : BackEndController
     {
         string uri = base.server.getViolationUri();
 
-        string access = PlayerPrefs.GetString("access");
+        // retrieve encoded access string and decode it
+        GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+        GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+        string access_encoded = PlayerPrefs.GetString("access");
+        string access = gc.ec.DecryptStringFromBytes_Aes(Convert.FromBase64String(access_encoded), gc.aes.Key, gc.aes.IV);
 
         WWWForm form = new WWWForm();
         form.AddField("type", type);
@@ -47,7 +44,7 @@ public class ViolationsController : BackEndController
         }
     }
 
-    /* Logs the server response from the 'add violation' API call */
+    /* Logs the server response (`jsonString`) from an API call */
     public void JsonHandler(string jsonString) {
         JObject jobject = JObject.Parse(jsonString);
         JToken msg = jobject["message"];

@@ -12,7 +12,7 @@ public class KeyboardDragHandler : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
+        // transform.position = eventData.position;
     }
 
     #endregion
