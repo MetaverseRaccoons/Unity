@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/menu_settings.unity
     guid: a6b74826bf0c7fe44845ad3177668f54
   - enabled: 1
-    path: Assets/Scenes/menu_profile.unity
+    path: Assets/Scenes/menu_login.unity
     guid: 3ada35e65cace3d4b90f9a403854941b
   - enabled: 1
     path: Assets/Scenes/menu_levels.unity
@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu_friends.unity
     guid: c218fd5b48c083245b66460d44f5b17d
+  - enabled: 1
+    path: Assets/Scenes/load.unity
+    guid: ddaddb570fd9a4909bb18e65afb0867e
+  - enabled: 1
+    path: Assets/Scenes/menu_profile.unity
+    guid: 8e6058c1af9f44e18a99169a593c92a6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 47f2527526c0e344d8a00b6f221b3690,
       type: 2}

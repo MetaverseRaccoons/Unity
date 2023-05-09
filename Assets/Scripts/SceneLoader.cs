@@ -9,4 +9,15 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void LoadProfileScene() {
+        GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+        GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+        if (gc.login) {
+            LoadScene("menu_profile");
+        }
+        else {
+            LoadScene("menu_login");
+        }
+    }
 }

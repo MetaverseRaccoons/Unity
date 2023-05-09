@@ -6,12 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.Networking; // API Requests
 using Newtonsoft.Json.Linq; // Json Deserializing
 
-// public class ViolationsScript : MonoBehaviour
-// {
-//     public Button button;
-//     public GameObject StatsControllerObj;  // StatsController script needs to be attached to a GameObject
-// }
-
 /// <summary>
 ///  This class controls violations communication with the backend server.
 /// </summary>
@@ -21,18 +15,18 @@ public class StatsController : BackEndController
     {}
 
     /* Sends a 'add kilometers' request to the server */
-    public IEnumerator RequestAddKilometers(int amt)
+    public IEnumerator RequestAddKilometers(float amt)
     {
         string uri = base.server.getKilometersUri();
 
         // retrieve encoded access string and decode it
         GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
         GameController gc = (GameController) gco.GetComponent(typeof(GameController));
-        string access_encoded = PlayerPrefs.GetString("access");
+        string access_encoded = gc.user.access;
         string access = gc.ec.DecryptStringFromBytes_Aes(Convert.FromBase64String(access_encoded), gc.aes.Key, gc.aes.IV);
 
         WWWForm form = new WWWForm();
-        form.AddField("kilometers", amt);
+        form.AddField("kilometers", amt.ToString());
 
         using (UnityWebRequest www = UnityWebRequest.Post(uri, form))
         {
@@ -48,18 +42,18 @@ public class StatsController : BackEndController
     }
 
     /* Sends a 'add minutes' request to the server */
-    public IEnumerator RequestAddMinutes(int amt)
+    public IEnumerator RequestAddMinutes(float amt)
     {
         string uri = base.server.getMinutesUri();
 
         // retrieve encoded access string and decode it
         GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
         GameController gc = (GameController) gco.GetComponent(typeof(GameController));
-        string access_encoded = PlayerPrefs.GetString("access");
+        string access_encoded = gc.user.access;
         string access = gc.ec.DecryptStringFromBytes_Aes(Convert.FromBase64String(access_encoded), gc.aes.Key, gc.aes.IV);
 
         WWWForm form = new WWWForm();
-        form.AddField("minutes", amt);
+        form.AddField("minutes", amt.ToString());
 
         using (UnityWebRequest www = UnityWebRequest.Post(uri, form))
         {

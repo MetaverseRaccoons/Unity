@@ -29,6 +29,19 @@ public class LoginController : BackEndController
             yield return www.SendWebRequest();
             if (www.result != UnityWebRequest.Result.Success) {
                 Debug.Log(www.error);
+                GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+                GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+                
+                // find keyboard script, to pass API response messages
+                GameObject keyboardObject = GameObject.Find("OnScreenKeyboard");
+                KeyboardScript keyboard = (KeyboardScript) keyboardObject.GetComponent(typeof(KeyboardScript));
+
+                if (www.error == "Cannot connect to destination host") {    
+                    keyboard.setMsg("Cannot connect to destination host", false);
+                }
+                else if (www.error == "HTTP/1.1 401 Unauthorized") {
+                    keyboard.setMsg("Wrong username or password", false);
+                }
             } else {
                 JsonHandler(www.downloadHandler.text);
             }
@@ -47,12 +60,20 @@ public class LoginController : BackEndController
         byte[] refresh_encoded = gc.ec.EncryptStringToBytes_Aes(refreshCode.ToString(), gc.aes.Key, gc.aes.IV);
         byte[] access_encoded = gc.ec.EncryptStringToBytes_Aes(accessCode.ToString(), gc.aes.Key, gc.aes.IV);
 
-        // save access and refresh to PlayerPrefs
-        PlayerPrefs.SetString("refresh", Convert.ToBase64String(refresh_encoded));
-        PlayerPrefs.SetString("access", Convert.ToBase64String(access_encoded));
+        // save access and refresh to User class
+        gc.user.refresh = Convert.ToBase64String(refresh_encoded);
+        gc.user.access = Convert.ToBase64String(access_encoded);
         Debug.Log("User credentials successfully saved in PlayerPrefs.");
 
-        // Debug.Log("refresh: " + refreshCode.ToString());
-        // Debug.Log("refresh encoded: " + PlayerPrefs.GetString("refresh"));
+        LoadProfileScene();
+    }
+
+    public void LoadProfileScene() {
+        GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
+        GameController gc = (GameController) gco.GetComponent(typeof(GameController));
+
+        gc.login = true;
+        StartCoroutine(gc.pc.RequestProfileInformation());
+        gc.sl.LoadScene("menu_profile");
     }
 }

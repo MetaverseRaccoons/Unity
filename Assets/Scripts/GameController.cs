@@ -13,6 +13,11 @@ public class GameController : MonoBehaviour
     public EncryptionController ec;
     public Aes aes;
     public StatsController sc;
+    public ProfileController pc;
+    public User user;
+    public KeyboardScript keyboard;
+    
+    public bool login = false;
 
     public void Awake() {
         // transform.gameObject returns the gameObject that this script is attached to in Unity
@@ -23,9 +28,10 @@ public class GameController : MonoBehaviour
         this.vc = transform.gameObject.AddComponent<ViolationsController>();
         this.lc = transform.gameObject.AddComponent<LoginController>();
         this.ec = transform.gameObject.AddComponent<EncryptionController>();
-        this.aes = Aes.Create();
         this.sc = transform.gameObject.AddComponent<StatsController>();
-
+        this.pc = transform.gameObject.AddComponent<ProfileController>();
+        this.aes = Aes.Create();
+        this.user = new User();
         this.sl.LoadScene("menu_main");
     }
 

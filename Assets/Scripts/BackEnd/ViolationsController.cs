@@ -23,7 +23,7 @@ public class ViolationsController : BackEndController
         // retrieve encoded access string and decode it
         GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
         GameController gc = (GameController) gco.GetComponent(typeof(GameController));
-        string access_encoded = PlayerPrefs.GetString("access");
+        string access_encoded = gc.user.access;
         string access = gc.ec.DecryptStringFromBytes_Aes(Convert.FromBase64String(access_encoded), gc.aes.Key, gc.aes.IV);
 
         WWWForm form = new WWWForm();

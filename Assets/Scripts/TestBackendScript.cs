@@ -13,8 +13,9 @@ public class TestBackendScript : MonoBehaviour
         GameController gc = (GameController) gco.GetComponent(typeof(GameController));
         
         // StartCoroutine(gc.vc.RequestAddViolation("speeding", "0.75", "Speeding in a 30km/h zone"));
-        // StartCoroutine(gc.sc.RequestAddKilometers(5));
-        StartCoroutine(gc.sc.RequestAddMinutes(37));
+        StartCoroutine(gc.sc.RequestAddKilometers(5.0f));
+        StartCoroutine(gc.sc.RequestAddMinutes(37.0f));
+        // StartCoroutine(gc.pc.RequestProfileInformation());
     }
 
     // Start is called before the first frame update

@@ -14,6 +14,7 @@ public class Server
     public static string ViolationUri = "/api/violation/";
     public static string KilometersUri = "/api/km_driven/";
     public static string MinutesUri = "/api/minutes_driven/";
+    public static string ProfileUri = "/api/user/";
 
     public Server()
     {
@@ -38,6 +39,10 @@ public class Server
 
     public string getMinutesUri() {
         return uri + MinutesUri;
+    }
+
+    public string getProfileUri() {
+        return uri + ProfileUri;
     }
 }
 

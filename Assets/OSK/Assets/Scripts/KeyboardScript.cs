@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking; // API Requests
 using System.Reflection; // ChangeType()
 using Newtonsoft.Json.Linq; // Json Deserializing
+using TMPro; // textmeshpro label
 
 /// <summary>
 ///  This class controls the Unity keyboard, input fields and login button functionality.
@@ -15,14 +16,24 @@ public class KeyboardScript : MonoBehaviour
     public InputField UsernameTextField, PasswordTextField, TextField;
     public Button UsernameButton, PasswordButton; // wrapper buttons because onClick functionality doesn't work well with InputFields
     public bool FieldSelector = true;  // true: username ; false: password
+    public bool shifted = false;
     public GameObject EngLayoutSml, EngLayoutBig, SymbLayout;
     public GameObject LoginControllerObj;  // MonoBehaviour LoginController script needs to be attached to a GameObject
+    public Button ShiftSmall;
+    public TMP_Text Msg;
+    
 
     /* Puts string 'alphabet' in the selected TextField object */
     public void alphabetFunction(string alphabet)
     {
         TextField = FieldSelector ? UsernameTextField : PasswordTextField;
         TextField.text=TextField.text + alphabet;
+        if (shifted == true) {
+            shifted = false;
+            CloseAllLayouts();
+            EngLayoutSml.SetActive(true);
+            ChangeSelection(ShiftSmall);
+        }
     }
 
     /* Removes last character in the selected TextField object */
@@ -36,7 +47,12 @@ public class KeyboardScript : MonoBehaviour
     public void Enter()
     {
         CloseAllLayouts();
-        ChangeSelection(FieldSelector ? UsernameButton : PasswordButton);
+    }
+
+    /*  */
+    public void Shift()
+    {
+        shifted = true;
     }
 
     /* Closes all three keyboard layouts */
@@ -45,6 +61,7 @@ public class KeyboardScript : MonoBehaviour
         EngLayoutSml.SetActive(false);
         EngLayoutBig.SetActive(false);
         SymbLayout.SetActive(false);
+        ChangeSelection(FieldSelector ? UsernameButton : PasswordButton);
     }
 
     /* Shows the selected layout by setting it to active */
@@ -71,6 +88,7 @@ public class KeyboardScript : MonoBehaviour
     /* Puts FieldSector to password value and displays the keyboard layout */  
     public void ActivatePassword()
     {
+        PasswordTextField.contentType = InputField.ContentType.Password;
         FieldSelector = false;
         CloseAllLayouts();
         EngLayoutSml.SetActive(true);
@@ -80,15 +98,22 @@ public class KeyboardScript : MonoBehaviour
     /* Retrieves input from both textfields and calls Login function */
     public void AttemptLogin()
     {
-        // string username = UsernameTextField.text.ToString();
-        // string password = PasswordTextField.text.ToString();
-
-        string username = "testuser1";
-        string password = "TestPass8263";
+        string username = UsernameTextField.text.ToString();
+        string password = PasswordTextField.text.ToString();
         
         GameObject gco = GameObject.Find("GameControllerObj");  // GameControllerObj should be in DontDestroyOnLoad
         GameController gc = (GameController) gco.GetComponent(typeof(GameController));
         StartCoroutine(gc.lc.RequestLogin(username, password));
+    }
+
+    public void setMsg(string msg, bool success=true) {
+        if (success) {
+            Msg.color = new Color(0, 1, 0, 1); // (R, G, B, Alpha)
+        }
+        else {
+            Msg.color = new Color(1, 0, 0, 1); // (R, G, B, Alpha)
+        }
+        this.Msg.text = msg;
     }
 
 }
